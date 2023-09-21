@@ -29,7 +29,7 @@ const listaMembri = [
   {
     nome: 'Angela Lopez',
     ruolo: 'Social Media Manager',
-    img: 'ngela-lopez-social-media-manager.jpg',
+    img: 'Angela-lopez-social-media-manager.jpg',
   },
   {
     nome: 'Scott Estrada',
@@ -51,6 +51,10 @@ const ulEl = document.querySelector('ul');
 for (let membro of listaMembri) {
   ulEl.innerHTML +=  `<li>${membro.nome} ${membro.ruolo} ${membro.img}</li>`
   console.log(membro)
+
+  // BONUS
+  const img = document.createElement('img');
+  img.src = `img/${membro.img}`;
 }
 
 
