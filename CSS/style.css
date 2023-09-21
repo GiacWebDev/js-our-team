@@ -1,0 +1,26 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.container h1 {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.container p {
+  font-size: 20px;
+  color: gray;
+  font-weight: 300;
+  text-align: center;
+  width: 70%;
+  line-height: 2.2rem;
+}

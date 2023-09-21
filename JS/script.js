@@ -5,6 +5,9 @@
 // 3. portare ul su js
 // 4. stampare su dom stesse info
 
+// BONUS
+// 5. Trasformare la stringa foto in una immagine effettiva
+// 6. Organizzare i singoli membri in card/schede
 
 
 const listaMembri = [
@@ -49,4 +52,6 @@ for (let membro of listaMembri) {
   ulEl.innerHTML +=  `<li>${membro.nome} ${membro.ruolo} ${membro.img}</li>`
   console.log(membro)
 }
+
+
 
