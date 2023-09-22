@@ -58,29 +58,44 @@ console.log(listaMembri);
 
 const cardsContainer = document.querySelector('.cards');
 
+// for (let membro of listaMembri) {
+//   const template = `
+//   <div class="col">
+//     <div class="card">
+//       <div class="img">
+//         <img src="img/${membro.img}" alt="${membro.nome}">
+//       </div>
 
-for (let membro of listaMembri) {
+//       <div class="bottom">
+//         <h3 class="title">${membro.nome}</h3>
+//         <div class="subtitle">${membro.ruolo}</div>
+//       </div>
+//     </div>
+//   </div>
+//   `;
+// for (let membro of listaMembri) {
+//   const nome = membro.nome;
+//   const ruolo = membro.ruolo;
+//   const img = membro.img;
+
+// }
+
+listaMembri.forEach(membro => {
   const template = `
   <div class="col">
-  <div class="card">
+    <div class="card">
       <div class="img">
-      <img src="img/${membro.img}" alt="${membro.nome}">
+        <img src="img/${membro.img}" alt="${membro.nome}">
       </div>
-      
+
       <div class="bottom">
-      <h3 class="title">${membro.nome}</h3>
-      <div class="subtitle">${membro.ruolo}</div>
+        <h3 class="title">${membro.nome}</h3>
+        <div class="subtitle">${membro.ruolo}</div>
       </div>
-      </div>
-      </div>
-      `;
-      // for (let membro of listaMembri) {
-        //   const nome = membro.nome;
-        //   const ruolo = membro.ruolo;
-//   const img = membro.img;
+    </div>
+  </div>
+  `;
 
 cardsContainer.innerHTML += template;
 
-}
-
-
+});
