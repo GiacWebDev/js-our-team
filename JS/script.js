@@ -44,18 +44,43 @@ const listaMembri = [
 ]
 console.log(listaMembri);
 
-// 3
-const ulEl = document.querySelector('ul');
+// // 3
+// const ulEl = document.querySelector('ul');
 
 // 4
+// + bonus inserimento immagine 
+// for (let membro of listaMembri) {
+//   ulEl.innerHTML +=  `<li>${membro.nome} ${membro.ruolo} <img src="img/${membro.img}"></li>`
+//   console.log(membro)
+// }
+
+
+
+const cardsContainer = document.querySelector('.cards');
+
+
 for (let membro of listaMembri) {
-  ulEl.innerHTML +=  `<li>${membro.nome} ${membro.ruolo} ${membro.img}</li>`
-  console.log(membro)
+  const template = `
+  <div class="col">
+  <div class="card">
+      <div class="img">
+      <img src="img/${membro.img}" alt="${membro.nome}">
+      </div>
+      
+      <div class="bottom">
+      <h3 class="title">${membro.nome}</h3>
+      <div class="subtitle">${membro.ruolo}</div>
+      </div>
+      </div>
+      </div>
+      `;
+      // for (let membro of listaMembri) {
+        //   const nome = membro.nome;
+        //   const ruolo = membro.ruolo;
+//   const img = membro.img;
 
-  // BONUS
-  const img = document.createElement('img');
-  img.src = `img/${membro.img}`;
+cardsContainer.innerHTML += template;
+
 }
-
 
 
